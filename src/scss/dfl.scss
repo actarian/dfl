@@ -128,8 +128,8 @@ footer {
 		flex-direction: column;
 		justify-content: center;
 		min-height: 646 / 1920 * 100vw;
-		// margin-top: 204 / 1920 * 100vw;
-		margin-top: 850 / 1920 * 100vw;
+		margin-top: 204 / 1920 * 100vw;
+		// margin-top: 850 / 1920 * 100vw;
 	}
 
 	.icon--love {
@@ -185,14 +185,9 @@ footer {
 	}
 }
 
-[title-hero] {
+[title-hero],
+[title-footer] {
 	position: relative;
-
-	/*
-	&:not(.char) {
-		visibility: hidden;
-	}
-	*/
 
 	.char {
 		display: inline-block;

@@ -2746,7 +2746,7 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 33.64583vw;
-  margin-top: 44.27083vw; }
+  margin-top: 10.625vw; }
 
 .section--design-for-love .icon--love {
   width: 97%; }
@@ -2797,13 +2797,10 @@ footer {
   [title] .word {
     display: inline-block; }
 
-[title-hero] {
-  position: relative;
-  /*
-	&:not(.char) {
-		visibility: hidden;
-	}
-	*/ }
-  [title-hero] .char {
+[title-hero],
+[title-footer] {
+  position: relative; }
+  [title-hero] .char,
+  [title-footer] .char {
     display: inline-block; }
 /*# sourceMappingURL=dfl.css.map */

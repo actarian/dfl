@@ -15630,14 +15630,13 @@ function () {
       var subscription = this.domService.smoothTop$('.page').subscribe(function (top) {
         var rect = _rect.default.fromNode(node);
 
-        var diff = document.body.offsetHeight - window.innerHeight;
-        var sy = (diff + top) / rect.height; // console.log(sy, diff, top, rect.height);
+        var innerHeight = window.innerHeight;
+        var diff = document.body.offsetHeight - innerHeight; // TweenMax.set(node, { yPercent: -100 * Math.min(1, sy) });
 
-        TweenMax.set(node, {
-          yPercent: -100 * Math.min(1, sy)
-        });
         paths.forEach(function (path, i) {
-          var pow = Math.min(1, Math.max(0, sy - i * 0.25));
+          var dy = rect.height / paths.length;
+          var sy = 1 / paths.length + (diff + top - rect.height + dy * i) / dy;
+          var pow = Math.min(1, Math.max(0, sy));
           var length = path.getTotalLength();
           TweenMax.set(path, {
             strokeDashoffset: length * pow
@@ -15766,13 +15765,16 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _rect = _interopRequireDefault(require("../shared/rect"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-/* jshint esversion: 6 */
 var TitleFooterDirective =
 /*#__PURE__*/
 function () {
@@ -15786,6 +15788,41 @@ function () {
   _createClass(TitleFooterDirective, [{
     key: "link",
     value: function link(scope, element, attributes, controller) {
+      var node = element[0];
+      var splitting = Splitting({
+        target: node
+      })[0];
+      splitting.chars.forEach(function (char, i) {
+        TweenMax.set(char, {
+          opacity: 0,
+          x: 100 * Math.cos(i * Math.PI),
+          y: 100 * Math.sin((i + 1) * Math.PI)
+        });
+      });
+      var subscription = this.domService.smoothTop$('.page').subscribe(function (top) {
+        var rect = _rect.default.fromNode(node);
+
+        var diff = document.body.offsetHeight - window.innerHeight;
+        var sy = (diff + top) / rect.height;
+        splitting.chars.forEach(function (char, i) {
+          var pow = Math.min(1, Math.max(0, sy - i * 0.2));
+          var opacity = 1 - pow;
+          var x = 100 * Math.cos(i * Math.PI) * pow;
+          var y = 100 * Math.sin((i + 1) * Math.PI) * pow;
+          TweenMax.set(char, {
+            opacity: opacity,
+            x: x,
+            y: y
+          });
+        });
+      });
+      element.on('$destroy', function () {
+        subscription.unsubscribe();
+      });
+    }
+  }, {
+    key: "link__",
+    value: function link__(scope, element, attributes, controller) {
       var _this = this;
 
       var node = element[0];
@@ -15856,7 +15893,7 @@ function () {
 exports.default = TitleFooterDirective;
 TitleFooterDirective.factory.$inject = ['DomService'];
 
-},{}],204:[function(require,module,exports){
+},{"../shared/rect":209}],204:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

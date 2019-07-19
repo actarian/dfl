@@ -1,0 +1,98 @@
+body {
+	font-family: 'Mont';
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 1.7;
+	background: #191818;
+	color: #ffffff;
+	letter-spacing: 0.05em;
+}
+
+.title--hero {
+	font-weight: 900;
+	font-size: 7.54vw;
+	line-height: 1;
+	text-transform: uppercase;
+
+	b {
+		font-weight: 900;
+	}
+
+	sup {
+		font-size: 5vw;
+		font-weight: 600;
+		margin: 0 -1vw 0 -1.5vw;
+		transform: translateY(10%);
+		position: relative;
+		display: inline-block;
+	}
+}
+
+.title {
+	font-weight: 700;
+	// font-size: 86px;
+	font-size: 86 / 1920 * 100vw;
+	line-height: 1;
+	margin-bottom: 50 / 1920 * 100vw;
+}
+
+.abstract {
+	font-weight: 400;
+	// font-size: 37px;
+	font-size: 37 / 1920 * 100vw;
+	line-height: 1.2;
+	margin-bottom: 50 / 1920 * 100vw;
+}
+
+.description {
+	font-weight: 300;
+	// font-size: 22px;
+	font-size: 22 / 1920 * 100vw;
+	line-height: 1.7;
+	color: #c5c5c5;
+}
+
+@media (min-width: 1024px) {
+	.title--hero {
+		white-space: nowrap;
+	}
+}
+
+@media (min-width: 1920px) {
+	.title--hero {
+		font-size: 147px;
+
+		sup {
+			font-size: 97px;
+			font-weight: 600;
+			margin: 0 -20px 0 -30px;
+			transform: translateY(10px);
+		}
+	}
+
+	.title {
+		font-size: 86px;
+		margin-bottom: 50px;
+	}
+
+	.abstract {
+		font-size: 37px;
+		margin-bottom: 50px;
+	}
+
+	.description {
+		font-size: 22px;
+	}
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	margin: 0;
+}

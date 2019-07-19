@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["src/js/app.bootstrap.js"],"sourcesContent":["/* jshint esversion: 6 */\n\nimport { default as AppModule } from './app.module.js';\n\nangular.bootstrap(document, [AppModule]);\n"],"file":"docs/js/dfl.js"}

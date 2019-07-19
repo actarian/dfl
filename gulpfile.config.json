@@ -1,0 +1,47 @@
+﻿{
+	"targets": {
+		"browser": {
+			"compile": [{
+				"input": "src/scss/dfl.scss",
+				"output": "docs/css/dfl.css",
+				"minify": false
+			}, {
+				"input": "src/js/app.bootstrap.js",
+				"output": "docs/js/dfl.js",
+				"minify": false
+			}],
+			"bundle": [{
+				"input": [
+					"node_modules/whatwg-fetch/dist/fetch.umd.js",
+					"node_modules/promise-polyfill/dist/polyfill.js",
+					"src/polyfills/polyfills.js"
+				],
+				"output": "docs/js/polyfills.js",
+				"minify": false
+			}, {
+				"input": [
+					"node_modules/angular/angular.js",
+					"node_modules/gsap/src/uncompressed/easing/EasePack.js",
+					"node_modules/gsap/src/uncompressed/TweenMax.js",
+					"node_modules/splitting/dist/splitting.js"
+				],
+				"output": "docs/js/vendors.js",
+				"minify": false
+			}, {
+				"input": [
+					"node_modules/animate.css/animate.css",
+					"node_modules/swiper/dist/css/swiper.css"
+				],
+				"output": "docs/css/vendors.css",
+				"minify": false
+			}]
+		}
+	},
+	"options": {
+		"tfs": false,
+		"server": {
+			"port": 48000,
+			"path": "/dfl/"
+		}
+	}
+}

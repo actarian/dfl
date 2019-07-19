@@ -15627,19 +15627,35 @@ function () {
           strokeDashoffset: length
         });
       });
-      var subscription = this.parallax$(node).subscribe(function (intersection) {
-        var y = intersection.center.y;
+      var subscription = this.domService.smoothTop$('.page').subscribe(function (top) {
+        var rect = _rect.default.fromNode(node);
+
+        var diff = document.body.offsetHeight - window.innerHeight;
+        var sy = (diff + top) / rect.height; // console.log(sy, diff, top, rect.height);
+
         TweenMax.set(node, {
-          yPercent: -100 * Math.max(0, y)
+          yPercent: -100 * Math.min(1, sy)
         });
         paths.forEach(function (path, i) {
-          var pow = Math.min(1, Math.max(0, y * 4 - i * 0.5));
+          var pow = Math.min(1, Math.max(0, sy - i * 0.25));
           var length = path.getTotalLength();
           TweenMax.set(path, {
             strokeDashoffset: length * pow
           });
         });
       });
+      /*
+      const subscription = this.parallax$(node).subscribe(intersection => {
+      	const y = intersection.center.y;
+      	TweenMax.set(node, { yPercent: -100 * Math.max(0, y) });
+      	paths.forEach((path, i) => {
+      		const pow = Math.min(1, Math.max(0, (y * 4) - i * 0.5));
+      		const length = path.getTotalLength();
+      		TweenMax.set(path, { strokeDashoffset: length * pow });
+      	});
+      });
+      */
+
       element.on('$destroy', function () {
         subscription.unsubscribe();
       });
@@ -15885,16 +15901,11 @@ function () {
         });
       }); // console.log('hero');
 
-      var subscription = this.parallax$(node).subscribe(function (intersection) {
-        var centerY = Math.max(0, intersection.center.y * -1 - 0.2);
+      var subscription = this.domService.smoothTop$('.page').subscribe(function (top) {
+        var sy = -top / node.offsetHeight;
         splitting.chars.forEach(function (char, i) {
-          /*
-          if (i === 0) {
-          	console.log(centerY);
-          }
-          */
           // const pow = Math.max(0, ((centerY * 4) - (splitting.chars.length - i) * 0.5));
-          var pow = Math.max(0, centerY * 2 - i * 0.1);
+          var pow = Math.max(0, sy - i * 0.2);
           var opacity = 1 - pow;
           var x = 100 * Math.cos(i * Math.PI) * pow;
           var y = 100 * Math.sin((i + 1) * Math.PI) * pow;
@@ -15905,13 +15916,32 @@ function () {
           });
         });
       });
+      /*
+      const subscription = this.parallax$(node).subscribe(intersection => {
+      	console.log(intersection);
+      	const centerY = Math.max(0, (intersection.center.y * -1) - 0.2);
+      	splitting.chars.forEach((char, i) => {
+      		// const pow = Math.max(0, ((centerY * 4) - (splitting.chars.length - i) * 0.5));
+      		const pow = Math.max(0, ((centerY * 2) - i * 0.1));
+      		const opacity = 1 - pow;
+      		const x = 100 * Math.cos(i * Math.PI) * pow;
+      		const y = 100 * Math.sin((i + 1) * Math.PI) * pow;
+      		TweenMax.set(char, {
+      			opacity: opacity,
+      			x: x,
+      			y: y,
+      		});
+      	});
+      });
+      */
+
       element.on('$destroy', function () {
         subscription.unsubscribe();
       });
     }
   }, {
-    key: "parallax$",
-    value: function parallax$(node) {
+    key: "parallax$__",
+    value: function parallax$__(node) {
       var py, ty;
       return this.domService.rafAndRect$().pipe((0, _operators.map)(function (datas) {
         var windowRect = datas[1];
@@ -16287,29 +16317,36 @@ function () {
       return DomService.scrollAndRect$;
     }
   }, {
-    key: "smoothScroll$",
-    value: function smoothScroll$(selector) {
+    key: "rafAndScroll$",
+    value: function rafAndScroll$() {
       var _this = this;
 
-      var friction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 10;
+      return this.raf$().pipe((0, _operators.map)(function (x) {
+        return _this.scrollTop;
+      }), (0, _operators.distinctUntilChanged)());
+    }
+  }, {
+    key: "smoothTop$",
+    value: function smoothTop$(selector) {
+      var _this2 = this;
+
+      var friction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 20;
       var body = document.querySelector('body');
       var node = document.querySelector(selector);
       var down = false;
       var first = true;
       return this.raf$().pipe((0, _operators.map)(function () {
-        var outerHeight = _this.getOuterHeight(node);
+        var outerHeight = _this2.getOuterHeight(node);
 
         if (body.offsetHeight !== outerHeight) {
           body.style = "height: ".concat(outerHeight, "px");
         }
 
         var nodeTop = node.top || 0;
-        var top = down ? -_this.scrollTop : tween(nodeTop, -_this.scrollTop, first ? 1 : friction);
+        var top = down ? -_this2.scrollTop : tween(nodeTop, -_this2.scrollTop, first ? 1 : friction);
 
         if (node.top !== top) {
           node.top = top;
-          node.style.transform = "translateX(-50%) translateY(".concat(top, "px)");
-          node.classList.add('smooth-scroll');
           first = false;
           return top;
         } else {
@@ -16317,6 +16354,16 @@ function () {
         }
       }), (0, _operators.filter)(function (x) {
         return x !== null;
+      }), (0, _operators.shareReplay)());
+    }
+  }, {
+    key: "smoothScroll$",
+    value: function smoothScroll$(selector) {
+      var friction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 20;
+      var node = document.querySelector(selector);
+      return this.smoothTop$(selector, friction).pipe((0, _operators.tap)(function (top) {
+        node.style.transform = "translateX(-50%) translateY(".concat(top, "px)");
+        node.classList.add('smooth-scroll');
       }), (0, _operators.shareReplay)());
     }
   }, {
@@ -16358,13 +16405,13 @@ function () {
   }, {
     key: "appearOnLoad$",
     value: function appearOnLoad$(node) {
-      var _this2 = this;
+      var _this3 = this;
 
       var value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0.0;
       // -0.5
       var isCover = node.hasAttribute('cover');
       return this.rafIntersection$(node).pipe((0, _operators.filter)(function (x) {
-        return (_this2.ready || isCover) && x.intersection.y > value && x.intersection.x > 0;
+        return (_this3.ready || isCover) && x.intersection.y > value && x.intersection.x > 0;
       }), (0, _operators.first)());
     }
   }, {

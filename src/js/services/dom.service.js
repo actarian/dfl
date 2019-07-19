@@ -2,7 +2,7 @@
 
 import { combineLatest, fromEvent, range } from 'rxjs';
 import { animationFrame } from 'rxjs/internal/scheduler/animationFrame';
-import { auditTime, distinctUntilChanged, filter, first, map, shareReplay, startWith } from 'rxjs/operators';
+import { auditTime, distinctUntilChanged, filter, first, map, shareReplay, startWith, tap } from 'rxjs/operators';
 import Rect from '../shared/rect';
 
 export function tween(from, to, friction) {
@@ -145,7 +145,14 @@ export default class DomService {
 		return DomService.scrollAndRect$;
 	}
 
-	smoothScroll$(selector, friction = 10) {
+	rafAndScroll$() {
+		return this.raf$().pipe(
+			map(x => this.scrollTop),
+			distinctUntilChanged()
+		);
+	}
+
+	smoothTop$(selector, friction = 20) {
 		const body = document.querySelector('body');
 		const node = document.querySelector(selector);
 		let down = false;
@@ -160,8 +167,6 @@ export default class DomService {
 				const top = down ? -this.scrollTop : tween(nodeTop, -this.scrollTop, (first ? 1 : friction));
 				if (node.top !== top) {
 					node.top = top;
-					node.style.transform = `translateX(-50%) translateY(${top}px)`;
-					node.classList.add('smooth-scroll');
 					first = false;
 					return top;
 				} else {
@@ -169,6 +174,17 @@ export default class DomService {
 				}
 			}),
 			filter(x => x !== null),
+			shareReplay()
+		);
+	}
+
+	smoothScroll$(selector, friction = 20) {
+		const node = document.querySelector(selector);
+		return this.smoothTop$(selector, friction).pipe(
+			tap(top => {
+				node.style.transform = `translateX(-50%) translateY(${top}px)`;
+				node.classList.add('smooth-scroll');
+			}),
 			shareReplay()
 		);
 	}

@@ -24,6 +24,9 @@ export default class TitleFooterDirective {
 			});
 		});
 		const subscription = this.domService.smoothTop$('.page').subscribe(top => {
+			if (window.innerWidth < 1024) {
+				top -= 200;
+			}
 			const rect = Rect.fromNode(node);
 			const diff = document.body.offsetHeight - window.innerHeight;
 			const sy = (diff + top) / rect.height;

@@ -215,9 +215,9 @@ footer {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		min-height: 646 / 1920 * 100vw;
+		min-height: 90vh;
+		// min-height: 646 / 1920 * 100vw;
 		margin-top: 204 / 1920 * 100vw;
-		// margin-top: 850 / 1920 * 100vw;
 	}
 
 	.icon--love {
@@ -252,7 +252,8 @@ footer {
 	@include media-breakpoint-down(sm) {
 
 		.container {
-			min-height: 50vh;
+			min-height: 90vh;
+			// min-height: 50vh;
 			margin-top: 0;
 		}
 

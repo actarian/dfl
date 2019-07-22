@@ -20,6 +20,11 @@ export default class LoveDirective {
 			TweenMax.set(path, { strokeDasharray: length, strokeDashoffset: length });
 		});
 		const subscription = this.domService.smoothTop$('.page').subscribe(top => {
+			if (window.innerWidth < 1024) {
+				top -= 200;
+			} else {
+				top -= window.innerHeight / 10;
+			}
 			const rect = Rect.fromNode(node);
 			const innerHeight = window.innerHeight;
 			const diff = document.body.offsetHeight - innerHeight;

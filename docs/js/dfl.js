@@ -15621,6 +15621,12 @@ function () {
         });
       });
       var subscription = this.domService.smoothTop$('.page').subscribe(function (top) {
+        if (window.innerWidth < 1024) {
+          top -= 200;
+        } else {
+          top -= window.innerHeight / 10;
+        }
+
         var rect = _rect.default.fromNode(node);
 
         var innerHeight = window.innerHeight;
@@ -15793,6 +15799,10 @@ function () {
         });
       });
       var subscription = this.domService.smoothTop$('.page').subscribe(function (top) {
+        if (window.innerWidth < 1024) {
+          top -= 200;
+        }
+
         var rect = _rect.default.fromNode(node);
 
         var diff = document.body.offsetHeight - window.innerHeight;

@@ -2828,7 +2828,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 33.64583vw;
+  min-height: 90vh;
   margin-top: 10.625vw; }
 
 .section--design-for-love .icon--love {
@@ -2857,7 +2857,7 @@ footer {
 
 @media (max-width: 1023.98px) {
   .section--design-for-love .container {
-    min-height: 50vh;
+    min-height: 90vh;
     margin-top: 0; }
   .section--design-for-love .title--hero {
     width: auto;

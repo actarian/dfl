@@ -2722,14 +2722,14 @@ footer {
     min-height: calc(100vh - 105px);
     margin-bottom: 0; }
   .section--hero .title--hero {
-    font-size: 78.5px;
+    font-size: 69.5px;
     line-height: 0.95;
     margin-top: -1.5em; }
     .section--hero .title--hero sup {
-      font-size: 43px;
+      font-size: 42px;
       margin: 0;
-      -webkit-transform: translateX(-11px) translateY(-3px);
-              transform: translateX(-11px) translateY(-3px);
+      -webkit-transform: translateY(2px) translateX(-12px);
+              transform: translateY(2px) translateX(-12px);
       display: inline-block;
       position: relative; } }
 

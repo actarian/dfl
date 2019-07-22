@@ -2722,16 +2722,24 @@ footer {
     min-height: calc(100vh - 105px);
     margin-bottom: 0; }
   .section--hero .title--hero {
-    font-size: 69.5px;
     line-height: 0.95;
-    margin-top: -1.5em; }
+    margin-top: -1.5em;
+    font-size: 85px; }
+    .section--hero .title--hero sup {
+      margin: 0;
+      display: inline-block;
+      position: relative;
+      font-size: 47px;
+      -webkit-transform: translateY(1px) translateX(-24px);
+              transform: translateY(1px) translateX(-24px); } }
+
+@media (max-width: 859.98px) {
+  .section--hero .title--hero {
+    font-size: 69.5px; }
     .section--hero .title--hero sup {
       font-size: 42px;
-      margin: 0;
       -webkit-transform: translateY(2px) translateX(-12px);
-              transform: translateY(2px) translateX(-12px);
-      display: inline-block;
-      position: relative; } }
+              transform: translateY(2px) translateX(-12px); } }
 
 @media (min-width: 1920px) {
   .section--hero .title--hero {

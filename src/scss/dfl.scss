@@ -68,16 +68,29 @@ footer {
 		}
 
 		.title--hero {
-			font-size: 69.5px;
 			line-height: 0.95;
 			margin-top: -1.5em;
+			font-size: 85px;
+
+			sup {
+				margin: 0;
+				display: inline-block;
+				position: relative;
+				font-size: 47px;
+				transform: translateY(1px) translateX(-24px);
+			}
+		}
+
+	}
+
+	@include media-breakpoint-down(xs) {
+
+		.title--hero {
+			font-size: 69.5px;
 
 			sup {
 				font-size: 42px;
-				margin: 0;
 				transform: translateY(2px) translateX(-12px);
-				display: inline-block;
-				position: relative;
 			}
 		}
 

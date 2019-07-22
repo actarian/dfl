@@ -19,11 +19,6 @@
 
 .container {
 	position: relative;
-
-	@include media-breakpoint-down(xs) {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
 }
 
 @include make-grid-columns();

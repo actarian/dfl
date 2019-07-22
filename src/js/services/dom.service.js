@@ -152,7 +152,7 @@ export default class DomService {
 		);
 	}
 
-	smoothTop$(selector, friction = 20) {
+	smoothTop$(selector, friction = 40) {
 		const body = document.querySelector('body');
 		const node = document.querySelector(selector);
 		let down = false;
@@ -163,8 +163,9 @@ export default class DomService {
 				if (body.offsetHeight !== outerHeight) {
 					body.style = `height: ${outerHeight}px`;
 				}
-				const nodeTop = node.top || 0;
-				const top = down ? -this.scrollTop : tween(nodeTop, -this.scrollTop, (first ? 1 : friction));
+				const y = -this.scrollTop;
+				const nodeTop = node.top || y;
+				const top = down ? y : tween(nodeTop, y, (first ? 1 : friction));
 				if (node.top !== top) {
 					node.top = top;
 					first = false;
@@ -178,7 +179,7 @@ export default class DomService {
 		);
 	}
 
-	smoothScroll$(selector, friction = 20) {
+	smoothScroll$(selector, friction = 40) {
 		const node = document.querySelector(selector);
 		return this.smoothTop$(selector, friction).pipe(
 			tap(top => {

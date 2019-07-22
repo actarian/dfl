@@ -15529,19 +15529,12 @@ function () {
       });
       var subscription = this.parallax$(node).subscribe(function (y) {
         TweenMax.set(path, {
-          strokeDashoffset: length * y
+          strokeDashoffset: length * Math.abs(y)
         });
       });
       element.on('$destroy', function () {
         subscription.unsubscribe();
       });
-    }
-  }, {
-    key: "units",
-    value: function units(value) {
-      var decimals = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 4;
-      var pow = Math.pow(10, decimals) / 10;
-      return Math.round(value * pow) / pow;
     }
   }, {
     key: "parallax$",
@@ -16367,7 +16360,7 @@ function () {
     value: function smoothTop$(selector) {
       var _this2 = this;
 
-      var friction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 20;
+      var friction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 40;
       var body = document.querySelector('body');
       var node = document.querySelector(selector);
       var down = false;
@@ -16379,8 +16372,9 @@ function () {
           body.style = "height: ".concat(outerHeight, "px");
         }
 
-        var nodeTop = node.top || 0;
-        var top = down ? -_this2.scrollTop : tween(nodeTop, -_this2.scrollTop, first ? 1 : friction);
+        var y = -_this2.scrollTop;
+        var nodeTop = node.top || y;
+        var top = down ? y : tween(nodeTop, y, first ? 1 : friction);
 
         if (node.top !== top) {
           node.top = top;
@@ -16396,7 +16390,7 @@ function () {
   }, {
     key: "smoothScroll$",
     value: function smoothScroll$(selector) {
-      var friction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 20;
+      var friction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 40;
       var node = document.querySelector(selector);
       return this.smoothTop$(selector, friction).pipe((0, _operators.tap)(function (top) {
         node.style.transform = "translateX(-50%) translateY(".concat(top, "px)");

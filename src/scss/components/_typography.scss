@@ -10,7 +10,7 @@ body {
 
 .title--hero {
 	font-weight: 900;
-	font-size: 7.54vw;
+	font-size: calc(73.4375vw * 0.103);
 	line-height: 1;
 	text-transform: uppercase;
 
@@ -19,12 +19,21 @@ body {
 	}
 
 	sup {
+		/*
 		font-size: 5vw;
 		font-weight: 600;
 		margin: 0 -1vw 0 -1.5vw;
 		transform: translateY(10%);
-		position: relative;
-		display: inline-block;
+		position: absolute;
+		display: block;
+		*/
+		font-size: 5vw;
+		font-weight: 600;
+		margin: 0;
+		position: absolute;
+		display: block;
+		top: 0;
+		right: -2.5vw;
 	}
 }
 
@@ -52,9 +61,34 @@ body {
 	color: #c5c5c5;
 }
 
-@media (min-width: 1024px) {
+@include media-breakpoint-down(sm) {
+
+	.title {
+		font-size: 46px;
+		line-height: 1;
+		margin-bottom: 35px;
+	}
+
+	.abstract {
+		font-size: 22px;
+		line-height: 1.2;
+		margin-bottom: 26px;
+	}
+
+	.description {
+		font-size: 15px;
+		line-height: 1.7;
+	}
+
+}
+
+@include media-breakpoint-up(md) {
 	.title--hero {
 		white-space: nowrap;
+
+		br {
+			display: none;
+		}
 	}
 }
 

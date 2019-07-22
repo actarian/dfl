@@ -73,19 +73,27 @@ body {
 
 .title--hero {
   font-weight: 900;
-  font-size: 7.54vw;
+  font-size: calc(73.4375vw * 0.103);
   line-height: 1;
   text-transform: uppercase; }
   .title--hero b {
     font-weight: 900; }
   .title--hero sup {
+    /*
+		font-size: 5vw;
+		font-weight: 600;
+		margin: 0 -1vw 0 -1.5vw;
+		transform: translateY(10%);
+		position: absolute;
+		display: block;
+		*/
     font-size: 5vw;
     font-weight: 600;
-    margin: 0 -1vw 0 -1.5vw;
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
-    position: relative;
-    display: inline-block; }
+    margin: 0;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: -2.5vw; }
 
 .title {
   font-weight: 700;
@@ -105,9 +113,24 @@ body {
   line-height: 1.7;
   color: #c5c5c5; }
 
+@media (max-width: 1023.98px) {
+  .title {
+    font-size: 46px;
+    line-height: 1;
+    margin-bottom: 35px; }
+  .abstract {
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 26px; }
+  .description {
+    font-size: 15px;
+    line-height: 1.7; } }
+
 @media (min-width: 1024px) {
   .title--hero {
-    white-space: nowrap; } }
+    white-space: nowrap; }
+    .title--hero br {
+      display: none; } }
 
 @media (min-width: 1920px) {
   .title--hero {
@@ -141,12 +164,12 @@ h5 {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .container {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .container {
       padding-right: 15px;
@@ -176,12 +199,12 @@ h5 {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .container-fluid {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .container-fluid {
       padding-right: 15px;
@@ -201,13 +224,13 @@ h5 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -10px;
-  margin-left: -10px;
+  margin-right: -40px;
+  margin-left: -40px;
   min-width: 100%; }
   @media (min-width: 860px) {
     .row {
-      margin-right: -15px;
-      margin-left: -15px; } }
+      margin-right: -40px;
+      margin-left: -40px; } }
   @media (min-width: 1024px) {
     .row {
       margin-right: -15px;
@@ -223,10 +246,6 @@ h5 {
 
 .container {
   position: relative; }
-  @media (max-width: 859.98px) {
-    .container {
-      padding-left: 30px;
-      padding-right: 30px; } }
 
 /*
 	%grid-column {
@@ -239,12 +258,12 @@ h5 {
 .col-1 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-1 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-1 {
       padding-right: 15px;
@@ -261,12 +280,12 @@ h5 {
 .col-2 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-2 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-2 {
       padding-right: 15px;
@@ -283,12 +302,12 @@ h5 {
 .col-3 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-3 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-3 {
       padding-right: 15px;
@@ -305,12 +324,12 @@ h5 {
 .col-4 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-4 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-4 {
       padding-right: 15px;
@@ -327,12 +346,12 @@ h5 {
 .col-5 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-5 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-5 {
       padding-right: 15px;
@@ -349,12 +368,12 @@ h5 {
 .col-6 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-6 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-6 {
       padding-right: 15px;
@@ -371,12 +390,12 @@ h5 {
 .col-7 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-7 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-7 {
       padding-right: 15px;
@@ -393,12 +412,12 @@ h5 {
 .col-8 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-8 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-8 {
       padding-right: 15px;
@@ -415,12 +434,12 @@ h5 {
 .col-9 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-9 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-9 {
       padding-right: 15px;
@@ -437,12 +456,12 @@ h5 {
 .col-10 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-10 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-10 {
       padding-right: 15px;
@@ -459,12 +478,12 @@ h5 {
 .col-11 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-11 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-11 {
       padding-right: 15px;
@@ -481,12 +500,12 @@ h5 {
 .col-12 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-12 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-12 {
       padding-right: 15px;
@@ -504,13 +523,13 @@ h5 {
 .col-auto {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col,
     .col-auto {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col,
     .col-auto {
@@ -725,12 +744,12 @@ h5 {
 .col-sm-1 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-sm-1 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-sm-1 {
       padding-right: 15px;
@@ -747,12 +766,12 @@ h5 {
 .col-sm-2 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-sm-2 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-sm-2 {
       padding-right: 15px;
@@ -769,12 +788,12 @@ h5 {
 .col-sm-3 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-sm-3 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-sm-3 {
       padding-right: 15px;
@@ -791,12 +810,12 @@ h5 {
 .col-sm-4 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-sm-4 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-sm-4 {
       padding-right: 15px;
@@ -813,12 +832,12 @@ h5 {
 .col-sm-5 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-sm-5 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-sm-5 {
       padding-right: 15px;
@@ -835,12 +854,12 @@ h5 {
 .col-sm-6 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-sm-6 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-sm-6 {
       padding-right: 15px;
@@ -857,12 +876,12 @@ h5 {
 .col-sm-7 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-sm-7 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-sm-7 {
       padding-right: 15px;
@@ -879,12 +898,12 @@ h5 {
 .col-sm-8 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-sm-8 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-sm-8 {
       padding-right: 15px;
@@ -901,12 +920,12 @@ h5 {
 .col-sm-9 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-sm-9 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-sm-9 {
       padding-right: 15px;
@@ -923,12 +942,12 @@ h5 {
 .col-sm-10 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-sm-10 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-sm-10 {
       padding-right: 15px;
@@ -945,12 +964,12 @@ h5 {
 .col-sm-11 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-sm-11 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-sm-11 {
       padding-right: 15px;
@@ -967,12 +986,12 @@ h5 {
 .col-sm-12 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-sm-12 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-sm-12 {
       padding-right: 15px;
@@ -990,13 +1009,13 @@ h5 {
 .col-sm-auto {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-sm,
     .col-sm-auto {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-sm,
     .col-sm-auto {
@@ -1175,12 +1194,12 @@ h5 {
 .col-md-1 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-md-1 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-md-1 {
       padding-right: 15px;
@@ -1197,12 +1216,12 @@ h5 {
 .col-md-2 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-md-2 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-md-2 {
       padding-right: 15px;
@@ -1219,12 +1238,12 @@ h5 {
 .col-md-3 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-md-3 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-md-3 {
       padding-right: 15px;
@@ -1241,12 +1260,12 @@ h5 {
 .col-md-4 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-md-4 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-md-4 {
       padding-right: 15px;
@@ -1263,12 +1282,12 @@ h5 {
 .col-md-5 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-md-5 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-md-5 {
       padding-right: 15px;
@@ -1285,12 +1304,12 @@ h5 {
 .col-md-6 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-md-6 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-md-6 {
       padding-right: 15px;
@@ -1307,12 +1326,12 @@ h5 {
 .col-md-7 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-md-7 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-md-7 {
       padding-right: 15px;
@@ -1329,12 +1348,12 @@ h5 {
 .col-md-8 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-md-8 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-md-8 {
       padding-right: 15px;
@@ -1351,12 +1370,12 @@ h5 {
 .col-md-9 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-md-9 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-md-9 {
       padding-right: 15px;
@@ -1373,12 +1392,12 @@ h5 {
 .col-md-10 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-md-10 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-md-10 {
       padding-right: 15px;
@@ -1395,12 +1414,12 @@ h5 {
 .col-md-11 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-md-11 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-md-11 {
       padding-right: 15px;
@@ -1417,12 +1436,12 @@ h5 {
 .col-md-12 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-md-12 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-md-12 {
       padding-right: 15px;
@@ -1440,13 +1459,13 @@ h5 {
 .col-md-auto {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-md,
     .col-md-auto {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-md,
     .col-md-auto {
@@ -1625,12 +1644,12 @@ h5 {
 .col-lg-1 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-lg-1 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-lg-1 {
       padding-right: 15px;
@@ -1647,12 +1666,12 @@ h5 {
 .col-lg-2 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-lg-2 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-lg-2 {
       padding-right: 15px;
@@ -1669,12 +1688,12 @@ h5 {
 .col-lg-3 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-lg-3 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-lg-3 {
       padding-right: 15px;
@@ -1691,12 +1710,12 @@ h5 {
 .col-lg-4 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-lg-4 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-lg-4 {
       padding-right: 15px;
@@ -1713,12 +1732,12 @@ h5 {
 .col-lg-5 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-lg-5 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-lg-5 {
       padding-right: 15px;
@@ -1735,12 +1754,12 @@ h5 {
 .col-lg-6 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-lg-6 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-lg-6 {
       padding-right: 15px;
@@ -1757,12 +1776,12 @@ h5 {
 .col-lg-7 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-lg-7 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-lg-7 {
       padding-right: 15px;
@@ -1779,12 +1798,12 @@ h5 {
 .col-lg-8 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-lg-8 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-lg-8 {
       padding-right: 15px;
@@ -1801,12 +1820,12 @@ h5 {
 .col-lg-9 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-lg-9 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-lg-9 {
       padding-right: 15px;
@@ -1823,12 +1842,12 @@ h5 {
 .col-lg-10 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-lg-10 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-lg-10 {
       padding-right: 15px;
@@ -1845,12 +1864,12 @@ h5 {
 .col-lg-11 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-lg-11 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-lg-11 {
       padding-right: 15px;
@@ -1867,12 +1886,12 @@ h5 {
 .col-lg-12 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-lg-12 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-lg-12 {
       padding-right: 15px;
@@ -1890,13 +1909,13 @@ h5 {
 .col-lg-auto {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-lg,
     .col-lg-auto {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-lg,
     .col-lg-auto {
@@ -2075,12 +2094,12 @@ h5 {
 .col-xl-1 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-xl-1 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-xl-1 {
       padding-right: 15px;
@@ -2097,12 +2116,12 @@ h5 {
 .col-xl-2 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-xl-2 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-xl-2 {
       padding-right: 15px;
@@ -2119,12 +2138,12 @@ h5 {
 .col-xl-3 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-xl-3 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-xl-3 {
       padding-right: 15px;
@@ -2141,12 +2160,12 @@ h5 {
 .col-xl-4 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-xl-4 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-xl-4 {
       padding-right: 15px;
@@ -2163,12 +2182,12 @@ h5 {
 .col-xl-5 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-xl-5 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-xl-5 {
       padding-right: 15px;
@@ -2185,12 +2204,12 @@ h5 {
 .col-xl-6 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-xl-6 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-xl-6 {
       padding-right: 15px;
@@ -2207,12 +2226,12 @@ h5 {
 .col-xl-7 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-xl-7 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-xl-7 {
       padding-right: 15px;
@@ -2229,12 +2248,12 @@ h5 {
 .col-xl-8 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-xl-8 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-xl-8 {
       padding-right: 15px;
@@ -2251,12 +2270,12 @@ h5 {
 .col-xl-9 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-xl-9 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-xl-9 {
       padding-right: 15px;
@@ -2273,12 +2292,12 @@ h5 {
 .col-xl-10 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-xl-10 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-xl-10 {
       padding-right: 15px;
@@ -2295,12 +2314,12 @@ h5 {
 .col-xl-11 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-xl-11 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-xl-11 {
       padding-right: 15px;
@@ -2317,12 +2336,12 @@ h5 {
 .col-xl-12 {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-xl-12 {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-xl-12 {
       padding-right: 15px;
@@ -2340,13 +2359,13 @@ h5 {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 40px;
+  padding-left: 40px; }
   @media (min-width: 860px) {
     .col-xl,
     .col-xl-auto {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 40px;
+      padding-left: 40px; } }
   @media (min-width: 1024px) {
     .col-xl,
     .col-xl-auto {
@@ -2672,6 +2691,12 @@ h5 {
 
 header {
   margin-top: 5.72917vw; }
+  @media (max-width: 1023.98px) {
+    header {
+      margin-top: 80px; }
+      header .icon--ws {
+        width: 25px;
+        height: 25px; } }
 
 footer {
   margin-top: 3.125vw;
@@ -2691,48 +2716,91 @@ footer {
   min-height: 34.6875vw;
   margin-bottom: 13.75vw; }
 
+@media (max-width: 1023.98px) {
+  .section--hero .container {
+    min-height: calc(100vh - 105px);
+    margin-bottom: 0; }
+  .section--hero .title--hero {
+    font-size: 78.5px;
+    line-height: 0.95;
+    margin-top: -1.5em; }
+    .section--hero .title--hero sup {
+      font-size: 43px;
+      margin: 0;
+      -webkit-transform: translateX(-11px) translateY(-3px);
+              transform: translateX(-11px) translateY(-3px);
+      display: inline-block;
+      position: relative; } }
+
 .section--letter {
   margin-top: 6.14583vw;
   margin-bottom: 6.14583vw; }
-  .section--letter .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  .section--letter .letter-0 {
-    margin-right: 7.0922%;
-    width: 17.30496%; }
-    .section--letter .letter-0 .icon--letter-0 {
-      width: 100%;
-      height: auto; }
-  .section--letter .letter-1 {
-    margin-left: 18.7234%;
-    margin-right: 7.0922%;
-    width: 29.78723%; }
-    .section--letter .letter-1 .icon--letter-1 {
-      width: 100%;
-      height: auto; }
-  .section--letter .letter-2 {
-    margin-left: -2.12766%;
-    width: 27.94326%; }
-    .section--letter .letter-2 .icon--letter-2 {
-      width: 100%;
-      height: auto; }
-  .section--letter .letter-3 {
-    margin-left: 10.21277%;
-    margin-right: 3.19149%;
-    width: 17.80142%; }
-    .section--letter .letter-3 .icon--letter-3 {
-      width: 100%;
-      height: auto; }
-  .section--letter .group--content--0 {
-    width: 41.13475%; }
-  .section--letter .group--content--1 {
-    width: 51.77305%; }
-  .section--letter .group--content--2 {
-    width: 51.77305%; }
-  .section--letter .group--content--3 {
-    margin-left: 24.8227%;
-    width: 43.97163%; }
+  .section--letter .icon--letter-0,
+  .section--letter .icon--letter-1,
+  .section--letter .icon--letter-2,
+  .section--letter .icon--letter-3 {
+    width: 100%;
+    height: auto; }
+  @media (max-width: 1023px) {
+    .section--letter .letter {
+      margin-top: 45px;
+      margin-bottom: 45px; }
+    .section--letter .letter-0 svg {
+      width: 146.4px; }
+    .section--letter .letter-1 {
+      text-align: right; }
+      .section--letter .letter-1 svg {
+        width: 252px;
+        -webkit-transform: translateX(50%);
+                transform: translateX(50%); }
+    .section--letter .letter-2 svg {
+      width: 236.4px;
+      -webkit-transform: translateX(-40%);
+              transform: translateX(-40%); }
+    .section--letter .letter-3 {
+      text-align: center; }
+      .section--letter .letter-3 svg {
+        width: 150.6px; } }
+  @media (min-width: 1024px) {
+    .section--letter .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .section--letter .letter-0 {
+      margin-right: 7.0922%;
+      width: 17.30496%; }
+    .section--letter .letter-1 {
+      margin-left: 18.7234%;
+      margin-right: 7.0922%;
+      width: 29.78723%; }
+    .section--letter .letter-2 {
+      margin-left: -2.12766%;
+      width: 27.94326%;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; }
+    .section--letter .letter-3 {
+      margin-left: 10.21277%;
+      margin-right: 3.19149%;
+      width: 17.80142%;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; }
+    .section--letter .group--content--0 {
+      width: 41.13475%; }
+    .section--letter .group--content--1 {
+      width: 51.77305%; }
+    .section--letter .group--content--2 {
+      width: 51.77305%;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; }
+    .section--letter .group--content--3 {
+      margin-left: 24.8227%;
+      width: 43.97163%;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; } }
 
 .section--design-for-love .container {
   display: -webkit-box;
@@ -2761,14 +2829,25 @@ footer {
 
 .section--design-for-love .title--hero {
   position: absolute;
-  width: 100%;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-51.5%) translateY(-43%);
+          transform: translateX(-51.5%) translateY(-43%);
   white-space: nowrap; }
   .section--design-for-love .title--hero b {
     color: #ee4840; }
+
+@media (max-width: 1023.98px) {
+  .section--design-for-love .container {
+    min-height: 50vh;
+    margin-top: 0; }
+  .section--design-for-love .title--hero {
+    width: auto;
+    font-size: 6.75625vw; } }
+
+@media (max-width: 859.98px) {
+  .section--design-for-love .title--hero {
+    font-size: calc((100vw - 80px) * 0.1); } }
 
 .nav--footer {
   display: -webkit-box;
@@ -2788,6 +2867,14 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+  @media (max-width: 1023.98px) {
+    .nav--footer {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .nav--footer .nav--footer__item {
+        margin-bottom: 35px; } }
 
 [title] {
   position: relative;

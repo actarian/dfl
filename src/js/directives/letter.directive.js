@@ -18,16 +18,11 @@ export default class LetterDirective {
 		const length = path.getTotalLength();
 		TweenMax.set(path, { strokeDasharray: length, strokeDashoffset: length });
 		const subscription = this.parallax$(node).subscribe(y => {
-			TweenMax.set(path, { strokeDashoffset: length * y });
+			TweenMax.set(path, { strokeDashoffset: length * Math.abs(y) });
 		});
 		element.on('$destroy', () => {
 			subscription.unsubscribe();
 		});
-	}
-
-	units(value, decimals = 4) {
-		const pow = Math.pow(10, decimals) / 10;
-		return Math.round(value * pow) / pow;
 	}
 
 	parallax$(node) {

@@ -16130,6 +16130,12 @@ function () {
     key: "link",
     value: function link(scope, element, attributes, controller) {
       var node = element[0];
+      var target = node.querySelector(attributes.virtualScroll);
+      TweenMax.to(target, 0.6, {
+        opacity: 1,
+        ease: Power2.easeInOut,
+        delay: 1
+      });
       var subscription = this.domService.smoothScroll$(attributes.virtualScroll).subscribe(function (top) {});
       element.on('$destroy', function () {
         subscription.unsubscribe();

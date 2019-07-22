@@ -15,6 +15,7 @@
 	max-width: 1920px;
 	margin: 0 auto;
 	overflow: hidden;
+	opacity: 0;
 
 	&.smooth-scroll {
 		position: fixed;
@@ -78,6 +79,14 @@ footer {
 				display: inline-block;
 				position: relative;
 			}
+		}
+
+	}
+
+	@media (min-width: 1920px) {
+
+		.title--hero {
+			width: 93%;
 		}
 
 	}
@@ -212,6 +221,7 @@ footer {
 
 	.title--hero {
 		position: absolute;
+		width: auto;
 		top: 50%;
 		left: 50%;
 		transform: translateX(-51.5%) translateY(-43%);
@@ -219,6 +229,10 @@ footer {
 
 		b {
 			color: #ee4840;
+		}
+
+		sup {
+			right: -2.5vw;
 		}
 	}
 

@@ -74,13 +74,13 @@ function compileJs(done) {
 						.transform('babelify', {
 							global: true,
 							presets: [
-							["@babel/preset-env", {
+								["@babel/preset-env", {
 									targets: {
 										chrome: '58',
 										ie: '11'
 									},
-							}]
-						],
+								}]
+							],
 							extensions: ['.js']
 						})
 						.bundle((error, response) => {

@@ -221,23 +221,21 @@ exports.config = config_1.config;
 },{"./internal/AsyncSubject":2,"./internal/BehaviorSubject":3,"./internal/Notification":5,"./internal/Observable":6,"./internal/ReplaySubject":9,"./internal/Scheduler":10,"./internal/Subject":11,"./internal/Subscriber":13,"./internal/Subscription":14,"./internal/config":15,"./internal/observable/ConnectableObservable":16,"./internal/observable/bindCallback":18,"./internal/observable/bindNodeCallback":19,"./internal/observable/combineLatest":20,"./internal/observable/concat":21,"./internal/observable/defer":22,"./internal/observable/empty":23,"./internal/observable/forkJoin":24,"./internal/observable/from":25,"./internal/observable/fromEvent":27,"./internal/observable/fromEventPattern":28,"./internal/observable/generate":32,"./internal/observable/iif":33,"./internal/observable/interval":34,"./internal/observable/merge":35,"./internal/observable/never":36,"./internal/observable/of":37,"./internal/observable/onErrorResumeNext":38,"./internal/observable/pairs":39,"./internal/observable/race":40,"./internal/observable/range":41,"./internal/observable/throwError":43,"./internal/observable/timer":44,"./internal/observable/using":45,"./internal/observable/zip":46,"./internal/operators/groupBy":82,"./internal/scheduler/VirtualTimeScheduler":159,"./internal/scheduler/animationFrame":160,"./internal/scheduler/asap":161,"./internal/scheduler/async":162,"./internal/scheduler/queue":163,"./internal/symbol/observable":165,"./internal/util/ArgumentOutOfRangeError":167,"./internal/util/EmptyError":168,"./internal/util/ObjectUnsubscribedError":170,"./internal/util/TimeoutError":171,"./internal/util/UnsubscriptionError":172,"./internal/util/identity":175,"./internal/util/isObservable":184,"./internal/util/noop":187,"./internal/util/pipe":189}],2:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -311,23 +309,21 @@ exports.AsyncSubject = AsyncSubject;
 },{"./Subject":11,"./Subscription":14}],3:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -356,7 +352,7 @@ var BehaviorSubject = function (_super) {
   }
 
   Object.defineProperty(BehaviorSubject.prototype, "value", {
-    get: function get() {
+    get: function () {
       return this.getValue();
     },
     enumerable: true,
@@ -395,23 +391,21 @@ exports.BehaviorSubject = BehaviorSubject;
 },{"./Subject":11,"./util/ObjectUnsubscribedError":170}],4:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -731,37 +725,35 @@ var hostReportError_1 = require("./util/hostReportError");
 
 exports.empty = {
   closed: true,
-  next: function next(value) {},
-  error: function error(err) {
+  next: function (value) {},
+  error: function (err) {
     if (config_1.config.useDeprecatedSynchronousErrorHandling) {
       throw err;
     } else {
       hostReportError_1.hostReportError(err);
     }
   },
-  complete: function complete() {}
+  complete: function () {}
 };
 
 },{"./config":15,"./util/hostReportError":174}],8:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -804,23 +796,21 @@ exports.OuterSubscriber = OuterSubscriber;
 },{"./Subscriber":13}],9:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -1020,23 +1010,21 @@ exports.Scheduler = Scheduler;
 },{}],11:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -1250,23 +1238,21 @@ exports.AnonymousSubject = AnonymousSubject;
 },{"../internal/symbol/rxSubscriber":166,"./Observable":6,"./SubjectSubscription":12,"./Subscriber":13,"./Subscription":14,"./util/ObjectUnsubscribedError":170}],12:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -1323,25 +1309,21 @@ exports.SubjectSubscription = SubjectSubscription;
 },{"./Subscription":14}],13:[function(require,module,exports){
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -1389,7 +1371,7 @@ var Subscriber = function (_super) {
           break;
         }
 
-        if (_typeof(destinationOrNext) === 'object') {
+        if (typeof destinationOrNext === 'object') {
           if (destinationOrNext instanceof Subscriber) {
             _this.syncErrorThrowable = destinationOrNext.syncErrorThrowable;
             _this.destination = destinationOrNext;
@@ -1577,7 +1559,7 @@ var SafeSubscriber = function (_super) {
       var _parentSubscriber = this._parentSubscriber;
 
       if (this._complete) {
-        var wrappedComplete = function wrappedComplete() {
+        var wrappedComplete = function () {
           return _this._complete.call(_this._context);
         };
 
@@ -1646,8 +1628,6 @@ exports.SafeSubscriber = SafeSubscriber;
 
 },{"../internal/symbol/rxSubscriber":166,"./Observer":7,"./Subscription":14,"./config":15,"./util/hostReportError":174,"./util/isFunction":179}],14:[function(require,module,exports){
 "use strict";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -1741,7 +1721,7 @@ var Subscription = function () {
   Subscription.prototype.add = function (teardown) {
     var subscription = teardown;
 
-    switch (_typeof(teardown)) {
+    switch (typeof teardown) {
       case 'function':
         subscription = new Subscription(teardown);
 
@@ -1862,23 +1842,21 @@ exports.config = {
 },{}],16:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -2103,23 +2081,21 @@ var RefCountSubscriber = function (_super) {
 },{"../Observable":6,"../Subject":11,"../Subscriber":13,"../Subscription":14,"../operators/refCount":108}],17:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -2259,7 +2235,7 @@ function bindCallback(callbackFunc, resultSelector, scheduler) {
         if (!subject) {
           subject = new AsyncSubject_1.AsyncSubject();
 
-          var handler = function handler() {
+          var handler = function () {
             var innerArgs = [];
 
             for (var _i = 0; _i < arguments.length; _i++) {
@@ -2311,7 +2287,7 @@ function dispatch(state) {
   if (!subject) {
     subject = params.subject = new AsyncSubject_1.AsyncSubject();
 
-    var handler = function handler() {
+    var handler = function () {
       var innerArgs = [];
 
       for (var _i = 0; _i < arguments.length; _i++) {
@@ -2409,7 +2385,7 @@ function bindNodeCallback(callbackFunc, resultSelector, scheduler) {
         if (!subject) {
           subject = params.subject = new AsyncSubject_1.AsyncSubject();
 
-          var handler = function handler() {
+          var handler = function () {
             var innerArgs = [];
 
             for (var _i = 0; _i < arguments.length; _i++) {
@@ -2466,7 +2442,7 @@ function dispatch(state) {
   if (!subject) {
     subject = params.subject = new AsyncSubject_1.AsyncSubject();
 
-    var handler = function handler() {
+    var handler = function () {
       var innerArgs = [];
 
       for (var _i = 0; _i < arguments.length; _i++) {
@@ -2519,23 +2495,21 @@ function dispatchError(arg) {
 },{"../AsyncSubject":2,"../Observable":6,"../operators/map":86,"../util/canReportError":173,"../util/isArray":176,"../util/isScheduler":186}],20:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -2762,23 +2736,21 @@ exports.emptyScheduled = emptyScheduled;
 },{"../Observable":6}],24:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -2903,8 +2875,6 @@ var ForkJoinSubscriber = function (_super) {
 },{"../Observable":6,"../OuterSubscriber":8,"../operators/map":86,"../util/isArray":176,"../util/subscribeToResult":195,"./empty":23}],25:[function(require,module,exports){
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -2950,7 +2920,7 @@ function from(input, scheduler) {
     }
   }
 
-  throw new TypeError((input !== null && _typeof(input) || input) + ' is not observable');
+  throw new TypeError((input !== null && typeof input || input) + ' is not observable');
 }
 
 exports.from = from;
@@ -3045,21 +3015,21 @@ function setupSubscription(sourceObj, eventName, handler, subscriber, options) {
     var source_1 = sourceObj;
     sourceObj.addEventListener(eventName, handler, options);
 
-    unsubscribe = function unsubscribe() {
+    unsubscribe = function () {
       return source_1.removeEventListener(eventName, handler, options);
     };
   } else if (isJQueryStyleEventEmitter(sourceObj)) {
     var source_2 = sourceObj;
     sourceObj.on(eventName, handler);
 
-    unsubscribe = function unsubscribe() {
+    unsubscribe = function () {
       return source_2.off(eventName, handler);
     };
   } else if (isNodeStyleEventEmitter(sourceObj)) {
     var source_3 = sourceObj;
     sourceObj.addListener(eventName, handler);
 
-    unsubscribe = function unsubscribe() {
+    unsubscribe = function () {
       return source_3.removeListener(eventName, handler);
     };
   } else if (sourceObj && sourceObj.length) {
@@ -3108,7 +3078,7 @@ function fromEventPattern(addHandler, removeHandler, resultSelector) {
   }
 
   return new Observable_1.Observable(function (subscriber) {
-    var handler = function handler() {
+    var handler = function () {
       var e = [];
 
       for (var _i = 0; _i < arguments.length; _i++) {
@@ -3228,17 +3198,17 @@ function fromObservable(input, scheduler) {
       sub.add(scheduler.schedule(function () {
         var observable = input[observable_1.observable]();
         sub.add(observable.subscribe({
-          next: function next(value) {
+          next: function (value) {
             sub.add(scheduler.schedule(function () {
               return subscriber.next(value);
             }));
           },
-          error: function error(err) {
+          error: function (err) {
             sub.add(scheduler.schedule(function () {
               return subscriber.error(err);
             }));
           },
-          complete: function complete() {
+          complete: function () {
             sub.add(scheduler.schedule(function () {
               return subscriber.complete();
             }));
@@ -3668,12 +3638,12 @@ function onErrorResumeNext() {
   }
 
   return new Observable_1.Observable(function (subscriber) {
-    var subNext = function subNext() {
+    var subNext = function () {
       return subscriber.add(onErrorResumeNext.apply(void 0, remainder).subscribe(subscriber));
     };
 
     return from_1.from(first).subscribe({
-      next: function next(value) {
+      next: function (value) {
         subscriber.next(value);
       },
       error: subNext,
@@ -3757,23 +3727,21 @@ exports.dispatch = dispatch;
 },{"../Observable":6,"../Subscription":14}],40:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -4126,23 +4094,21 @@ exports.using = using;
 },{"../Observable":6,"./empty":23,"./from":25}],46:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -4447,23 +4413,21 @@ var ZipBufferIterator = function (_super) {
 },{"../../internal/symbol/iterator":164,"../OuterSubscriber":8,"../Subscriber":13,"../util/isArray":176,"../util/subscribeToResult":195,"./fromArray":26}],47:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -4594,23 +4558,21 @@ exports.auditTime = auditTime;
 },{"../observable/timer":44,"../scheduler/async":162,"./audit":47}],49:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -4677,23 +4639,21 @@ var BufferSubscriber = function (_super) {
 },{"../OuterSubscriber":8,"../util/subscribeToResult":195}],50:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -4833,23 +4793,21 @@ var BufferSkipCountSubscriber = function (_super) {
 },{"../Subscriber":13}],51:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -5084,23 +5042,21 @@ function dispatchBufferClose(arg) {
 },{"../Subscriber":13,"../scheduler/async":162,"../util/isScheduler":186}],52:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -5256,23 +5212,21 @@ var BufferToggleSubscriber = function (_super) {
 },{"../OuterSubscriber":8,"../Subscription":14,"../util/subscribeToResult":195}],53:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -5395,23 +5349,21 @@ var BufferWhenSubscriber = function (_super) {
 },{"../OuterSubscriber":8,"../Subscription":14,"../util/subscribeToResult":195}],54:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -5616,23 +5568,21 @@ exports.concatMapTo = concatMapTo;
 },{"./concatMap":59}],61:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -5716,23 +5666,21 @@ var CountSubscriber = function (_super) {
 },{"../Subscriber":13}],62:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -5848,23 +5796,21 @@ var DebounceSubscriber = function (_super) {
 },{"../OuterSubscriber":8,"../util/subscribeToResult":195}],63:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -5964,23 +5910,21 @@ function dispatchNext(subscriber) {
 },{"../Subscriber":13,"../scheduler/async":162}],64:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -6050,23 +5994,21 @@ var DefaultIfEmptySubscriber = function (_super) {
 },{"../Subscriber":13}],65:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -6203,23 +6145,21 @@ var DelayMessage = function () {
 },{"../Notification":5,"../Subscriber":13,"../scheduler/async":162,"../util/isDate":178}],66:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -6408,23 +6348,21 @@ var SubscriptionDelaySubscriber = function (_super) {
 },{"../Observable":6,"../OuterSubscriber":8,"../Subscriber":13,"../util/subscribeToResult":195}],67:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -6475,23 +6413,21 @@ var DeMaterializeSubscriber = function (_super) {
 },{"../Subscriber":13}],68:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -6593,23 +6529,21 @@ exports.DistinctSubscriber = DistinctSubscriber;
 },{"../OuterSubscriber":8,"../util/subscribeToResult":195}],69:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -6799,23 +6733,21 @@ exports.endWith = endWith;
 },{"../observable/concat":21,"../observable/empty":23,"../observable/fromArray":26,"../observable/scalar":42,"../util/isScheduler":186}],73:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -6897,23 +6829,21 @@ var EverySubscriber = function (_super) {
 },{"../Subscriber":13}],74:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -6990,23 +6920,21 @@ var SwitchFirstSubscriber = function (_super) {
 },{"../OuterSubscriber":8,"../util/subscribeToResult":195}],75:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -7136,23 +7064,21 @@ var ExhaustMapSubscriber = function (_super) {
 },{"../InnerSubscriber":4,"../OuterSubscriber":8,"../observable/from":25,"../util/subscribeToResult":195,"./map":86}],76:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -7312,23 +7238,21 @@ exports.ExpandSubscriber = ExpandSubscriber;
 },{"../OuterSubscriber":8,"../util/subscribeToResult":195}],77:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -7398,23 +7322,21 @@ var FilterSubscriber = function (_super) {
 },{"../Subscriber":13}],78:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -7469,23 +7391,21 @@ var FinallySubscriber = function (_super) {
 },{"../Subscriber":13,"../Subscription":14}],79:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -7630,23 +7550,21 @@ exports.first = first;
 },{"../util/EmptyError":168,"../util/identity":175,"./defaultIfEmpty":64,"./filter":77,"./take":129,"./throwIfEmpty":136}],82:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -7902,23 +7820,21 @@ var InnerRefCountSubscription = function (_super) {
 },{"../Observable":6,"../Subject":11,"../Subscriber":13,"../Subscription":14}],83:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -7967,23 +7883,21 @@ var IgnoreElementsSubscriber = function (_super) {
 },{"../Subscriber":13}],84:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -8076,23 +7990,21 @@ exports.last = last;
 },{"../util/EmptyError":168,"../util/identity":175,"./defaultIfEmpty":64,"./filter":77,"./takeLast":130,"./throwIfEmpty":136}],86:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -8166,23 +8078,21 @@ var MapSubscriber = function (_super) {
 },{"../Subscriber":13}],87:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -8238,23 +8148,21 @@ var MapToSubscriber = function (_super) {
 },{"../Subscriber":13}],88:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -8383,23 +8291,21 @@ exports.mergeAll = mergeAll;
 },{"../util/identity":175,"./mergeMap":92}],92:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -8581,23 +8487,21 @@ exports.mergeMapTo = mergeMapTo;
 },{"./mergeMap":92}],94:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -8809,23 +8713,21 @@ exports.MulticastOperator = MulticastOperator;
 },{"../observable/ConnectableObservable":16}],97:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -8934,23 +8836,21 @@ exports.ObserveOnMessage = ObserveOnMessage;
 },{"../Notification":5,"../Subscriber":13}],98:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -9071,23 +8971,21 @@ var OnErrorResumeNextSubscriber = function (_super) {
 },{"../InnerSubscriber":4,"../OuterSubscriber":8,"../observable/from":25,"../util/isArray":176,"../util/subscribeToResult":195}],99:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -9193,7 +9091,7 @@ function pluck() {
 exports.pluck = pluck;
 
 function plucker(props, length) {
-  var mapper = function mapper(x) {
+  var mapper = function (x) {
     var currentProp = x;
 
     for (var i = 0; i < length; i++) {
@@ -9359,23 +9257,21 @@ exports.reduce = reduce;
 },{"../util/pipe":189,"./defaultIfEmpty":64,"./scan":115,"./takeLast":130}],108:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -9468,23 +9364,21 @@ var RefCountSubscriber = function (_super) {
 },{"../Subscriber":13}],109:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -9566,23 +9460,21 @@ var RepeatSubscriber = function (_super) {
 },{"../Subscriber":13,"../observable/empty":23}],110:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -9712,23 +9604,21 @@ var RepeatWhenSubscriber = function (_super) {
 },{"../OuterSubscriber":8,"../Subject":11,"../util/subscribeToResult":195}],111:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -9802,23 +9692,21 @@ var RetrySubscriber = function (_super) {
 },{"../Subscriber":13}],112:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -9935,23 +9823,21 @@ var RetryWhenSubscriber = function (_super) {
 },{"../OuterSubscriber":8,"../Subject":11,"../util/subscribeToResult":195}],113:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -10028,23 +9914,21 @@ var SampleSubscriber = function (_super) {
 },{"../OuterSubscriber":8,"../util/subscribeToResult":195}],114:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -10130,23 +10014,21 @@ function dispatchNotification(state) {
 },{"../Subscriber":13,"../scheduler/async":162}],115:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -10208,10 +10090,10 @@ var ScanSubscriber = function (_super) {
   }
 
   Object.defineProperty(ScanSubscriber.prototype, "seed", {
-    get: function get() {
+    get: function () {
       return this._seed;
     },
-    set: function set(value) {
+    set: function (value) {
       this.hasSeed = true;
       this._seed = value;
     },
@@ -10248,23 +10130,21 @@ var ScanSubscriber = function (_super) {
 },{"../Subscriber":13}],116:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -10449,8 +10329,6 @@ exports.share = share;
 },{"../Subject":11,"./multicast":96,"./refCount":108}],118:[function(require,module,exports){
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -10460,7 +10338,7 @@ var ReplaySubject_1 = require("../ReplaySubject");
 function shareReplay(configOrBufferSize, windowTime, scheduler) {
   var config;
 
-  if (configOrBufferSize && _typeof(configOrBufferSize) === 'object') {
+  if (configOrBufferSize && typeof configOrBufferSize === 'object') {
     config = configOrBufferSize;
   } else {
     config = {
@@ -10497,14 +10375,14 @@ function shareReplayOperator(_a) {
       hasError = false;
       subject = new ReplaySubject_1.ReplaySubject(bufferSize, windowTime, scheduler);
       subscription = source.subscribe({
-        next: function next(value) {
+        next: function (value) {
           subject.next(value);
         },
-        error: function error(err) {
+        error: function (err) {
           hasError = true;
           subject.error(err);
         },
-        complete: function complete() {
+        complete: function () {
           isComplete = true;
           subject.complete();
         }
@@ -10528,23 +10406,21 @@ function shareReplayOperator(_a) {
 },{"../ReplaySubject":9}],119:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -10642,23 +10518,21 @@ var SingleSubscriber = function (_super) {
 },{"../Subscriber":13,"../util/EmptyError":168}],120:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -10717,23 +10591,21 @@ var SkipSubscriber = function (_super) {
 },{"../Subscriber":13}],121:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -10812,23 +10684,21 @@ var SkipLastSubscriber = function (_super) {
 },{"../Subscriber":13,"../util/ArgumentOutOfRangeError":167}],122:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -10906,23 +10776,21 @@ var SkipUntilSubscriber = function (_super) {
 },{"../InnerSubscriber":4,"../OuterSubscriber":8,"../util/subscribeToResult":195}],123:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -11095,23 +10963,21 @@ exports.switchAll = switchAll;
 },{"../util/identity":175,"./switchMap":127}],127:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -11256,23 +11122,21 @@ exports.switchMapTo = switchMapTo;
 },{"./switchMap":127}],129:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -11351,23 +11215,21 @@ var TakeSubscriber = function (_super) {
 },{"../Subscriber":13,"../observable/empty":23,"../util/ArgumentOutOfRangeError":167}],130:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -11463,23 +11325,21 @@ var TakeLastSubscriber = function (_super) {
 },{"../Subscriber":13,"../observable/empty":23,"../util/ArgumentOutOfRangeError":167}],131:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -11548,23 +11408,21 @@ var TakeUntilSubscriber = function (_super) {
 },{"../OuterSubscriber":8,"../util/subscribeToResult":195}],132:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -11651,23 +11509,21 @@ var TakeWhileSubscriber = function (_super) {
 },{"../Subscriber":13}],133:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -11773,23 +11629,21 @@ var TapSubscriber = function (_super) {
 },{"../Subscriber":13,"../util/isFunction":179,"../util/noop":187}],134:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -11926,23 +11780,21 @@ var ThrottleSubscriber = function (_super) {
 },{"../OuterSubscriber":8,"../util/subscribeToResult":195}],135:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -12076,10 +11928,10 @@ exports.throwIfEmpty = function (errorFactory) {
 
   return tap_1.tap({
     hasValue: false,
-    next: function next() {
+    next: function () {
       this.hasValue = true;
     },
-    complete: function complete() {
+    complete: function () {
       if (!this.hasValue) {
         throw errorFactory();
       }
@@ -12175,23 +12027,21 @@ exports.timeout = timeout;
 },{"../observable/throwError":43,"../scheduler/async":162,"../util/TimeoutError":171,"./timeoutWith":139}],139:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -12355,23 +12205,21 @@ exports.toArray = toArray;
 },{"./reduce":107}],142:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -12477,23 +12325,21 @@ var WindowSubscriber = function (_super) {
 },{"../OuterSubscriber":8,"../Subject":11,"../util/subscribeToResult":195}],143:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -12610,23 +12456,21 @@ var WindowCountSubscriber = function (_super) {
 },{"../Subject":11,"../Subscriber":13}],144:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -12710,7 +12554,7 @@ var CountedSubject = function (_super) {
   };
 
   Object.defineProperty(CountedSubject.prototype, "numberOfNextedValues", {
-    get: function get() {
+    get: function () {
       return this._numberOfNextedValues;
     },
     enumerable: true,
@@ -12870,23 +12714,21 @@ function dispatchWindowClose(state) {
 },{"../Subject":11,"../Subscriber":13,"../scheduler/async":162,"../util/isNumeric":182,"../util/isScheduler":186}],145:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -13071,23 +12913,21 @@ var WindowToggleSubscriber = function (_super) {
 },{"../OuterSubscriber":8,"../Subject":11,"../Subscription":14,"../util/subscribeToResult":195}],146:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -13213,23 +13053,21 @@ var WindowSubscriber = function (_super) {
 },{"../OuterSubscriber":8,"../Subject":11,"../util/subscribeToResult":195}],147:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -13392,23 +13230,21 @@ exports.zipAll = zipAll;
 },{"../observable/zip":46}],150:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -13447,23 +13283,21 @@ exports.Action = Action;
 },{"../Subscription":14}],151:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -13530,23 +13364,21 @@ exports.AnimationFrameAction = AnimationFrameAction;
 },{"./AsyncAction":155}],152:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -13603,23 +13435,21 @@ exports.AnimationFrameScheduler = AnimationFrameScheduler;
 },{"./AsyncScheduler":156}],153:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -13686,23 +13516,21 @@ exports.AsapAction = AsapAction;
 },{"../util/Immediate":169,"./AsyncAction":155}],154:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -13759,23 +13587,21 @@ exports.AsapScheduler = AsapScheduler;
 },{"./AsyncScheduler":156}],155:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -13909,23 +13735,21 @@ exports.AsyncAction = AsyncAction;
 },{"./Action":150}],156:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -14011,23 +13835,21 @@ exports.AsyncScheduler = AsyncScheduler;
 },{"../Scheduler":10}],157:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -14093,23 +13915,21 @@ exports.QueueAction = QueueAction;
 },{"./AsyncAction":155}],158:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -14140,23 +13960,21 @@ exports.QueueScheduler = QueueScheduler;
 },{"./AsyncScheduler":156}],159:[function(require,module,exports){
 "use strict";
 
-var __extends = void 0 && (void 0).__extends || function () {
-  var _extendStatics = function extendStatics(d, b) {
-    _extendStatics = Object.setPrototypeOf || {
+var __extends = this && this.__extends || function () {
+  var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || {
       __proto__: []
     } instanceof Array && function (d, b) {
       d.__proto__ = b;
     } || function (d, b) {
-      for (var p in b) {
-        if (b.hasOwnProperty(p)) d[p] = b[p];
-      }
+      for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
 
-    return _extendStatics(d, b);
+    return extendStatics(d, b);
   };
 
   return function (d, b) {
-    _extendStatics(d, b);
+    extendStatics(d, b);
 
     function __() {
       this.constructor = d;
@@ -14447,7 +14265,7 @@ function runIfPresent(handle) {
 }
 
 exports.Immediate = {
-  setImmediate: function setImmediate(cb) {
+  setImmediate: function (cb) {
     var handle = nextHandle++;
     tasksByHandle[handle] = cb;
     Promise.resolve().then(function () {
@@ -14455,7 +14273,7 @@ exports.Immediate = {
     });
     return handle;
   },
-  clearImmediate: function clearImmediate(handle) {
+  clearImmediate: function (handle) {
     delete tasksByHandle[handle];
   }
 };
@@ -14668,14 +14486,12 @@ exports.isNumeric = isNumeric;
 },{"./isArray":176}],183:[function(require,module,exports){
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
 function isObject(x) {
-  return x !== null && _typeof(x) === 'object';
+  return x !== null && typeof x === 'object';
 }
 
 exports.isObject = isObject;

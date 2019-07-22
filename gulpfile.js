@@ -73,14 +73,15 @@ function compileJs(done) {
 					browserify(file.path)
 						.transform('babelify', {
 							global: true,
+							/*
 							presets: [
 								["@babel/preset-env", {
 									targets: {
-										chrome: '58',
-										ie: '11'
+										chrome: '58'
 									},
 								}]
 							],
+							*/
 							extensions: ['.js']
 						})
 						.bundle((error, response) => {

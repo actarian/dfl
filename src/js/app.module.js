@@ -1,5 +1,6 @@
 ﻿/* jshint esversion: 6 */
 
+import 'core-js'; // <- at the top of your entry point
 import LetterDirective from './directives/letter.directive';
 import LoveDirective from './directives/love.directive';
 import ScrollDirective from './directives/scroll.directive';

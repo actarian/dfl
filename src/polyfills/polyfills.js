@@ -119,6 +119,7 @@ if (!Array.prototype.fill) {
 	});
 }
 
+/*
 if (!window.Symbol) {
 	var idCounter = 0;
 	Symbol = function Symbol(key) {
@@ -127,6 +128,7 @@ if (!window.Symbol) {
 	Symbol.iterator = Symbol('Symbol.iterator');
 	window.Symbol = Symbol;
 }
+*/
 
 /*
 // Production steps of ECMA-262, Edition 6, 22.1.2.1

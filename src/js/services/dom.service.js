@@ -161,7 +161,7 @@ export default class DomService {
 			map(() => {
 				const outerHeight = this.getOuterHeight(node);
 				if (body.offsetHeight !== outerHeight) {
-					body.style = `height: ${outerHeight}px`;
+					body.style.height = `${outerHeight}px`;
 				}
 				const y = -this.scrollTop;
 				const nodeTop = node.top || y;

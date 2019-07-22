@@ -16201,7 +16201,7 @@ function () {
         var outerHeight = _this2.getOuterHeight(node);
 
         if (body.offsetHeight !== outerHeight) {
-          body.style = "height: ".concat(outerHeight, "px");
+          body.style.height = "".concat(outerHeight, "px");
         }
 
         var y = -_this2.scrollTop;
@@ -16579,4 +16579,3 @@ function () {
 exports.default = Rect;
 
 },{}]},{},[198]);
-//# sourceMappingURL=dfl.js.map

@@ -136,11 +136,13 @@ body {
   .title--hero {
     font-size: 147px; }
     .title--hero sup {
-      font-size: 97px;
-      font-weight: 600;
-      margin: 0 -20px 0 -30px;
-      -webkit-transform: translateY(10px);
-              transform: translateY(10px); }
+      /*
+			font-size: 97px;
+			font-weight: 600;
+			margin: 0 -20px 0 -30px;
+			transform: translateY(10px);
+			*/
+      right: -6.3vw; }
   .title {
     font-size: 86px;
     margin-bottom: 50px; }

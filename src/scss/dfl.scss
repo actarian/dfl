@@ -63,7 +63,8 @@ footer {
 	@include media-breakpoint-down(sm) {
 
 		.container {
-			min-height: calc(100vh - 105px);
+			height: calc(100vh - 105px);
+			min-height: 370px;
 			margin-bottom: 0;
 		}
 

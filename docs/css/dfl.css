@@ -2721,7 +2721,8 @@ footer {
 
 @media (max-width: 1023.98px) {
   .section--hero .container {
-    min-height: calc(100vh - 105px);
+    height: calc(100vh - 105px);
+    min-height: 370px;
     margin-bottom: 0; }
   .section--hero .title--hero {
     line-height: 0.95;

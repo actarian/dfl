@@ -21,7 +21,7 @@
 		"start": "gulp"
 	},
 	"dependencies": {
-		"angular": "1.7.8",
+		"angular": "1.8.0",
 		"gsap": "^2.1.2",
 		"promise-polyfill": "^8.1.0",
 		"rxjs": "~6.4.0",
